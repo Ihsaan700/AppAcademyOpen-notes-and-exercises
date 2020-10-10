@@ -243,7 +243,6 @@ def factors_of(num)
   end
 
   return arr
-
 end
 
 # print factors_of(3)   # => [1, 3]
