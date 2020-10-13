@@ -205,19 +205,21 @@ p new_hash # => {:a=>1, :b=>2, :c=>3}
 # el = 2
 # new_acc = 20
 [11, 7, 2, 4].inject { |acc, el| acc + el }
+
 # Now the acc is 20 and we have to do one more iteration for the last el:
 
 # acc = 20
 # el = 4
 # new_acc = 24
 p [11, 7, 2, 4].inject { |acc, el| acc + el } # => 24
+
 # Since we are done iterating through all elements, inject will return the final accumulator. We were able to add up all elements of the array using inject! If you're not convinced of how useful inject is, you're probably thinking why don't we use a simpler loop or just use the Array#sum method. inject is an awesome method because of how versatile it is.
 
 # Applying our same steps as before, we'll leave it to you to ponder how inject can also find the total product of an array:
 
 p [11, 7, 2, 4].inject { |acc, el| acc * el } # => 616
-# Or how about finding the minimum value in an array:
 
+# Or how about finding the minimum value in an array:
 p [11, 7, 2, 4].inject do |acc, el|
   if el < acc
     el
@@ -225,6 +227,7 @@ p [11, 7, 2, 4].inject do |acc, el|
     acc
   end
 end # => 2
+
 # Because the result of the block is always reassigned to be the new accumulator, we needed to return the current acc in the event that the el we are iterating through is not smaller than the acc. The else is necessary to avoid our block from resulting in nil.
 
 # The key to understanding inject is to remember that the accumulator will be reassigned to the result of the block on every iteration. Because inject performs a simple reassignment to the accumulator, we can design any block to control how the accumulator should change.
@@ -237,21 +240,25 @@ end # => 2
 # el = 11
 # new_acc = 111
 [11, 7, 2, 4].inject(100) { |acc, el| acc + el }
+
 # SECOND ITERATION
 # acc = 111
 # el = 7
 # new_acc = 118
 [11, 7, 2, 4].inject(100) { |acc, el| acc + el }
+
 # THIRD ITERATION
 # acc = 118
 # el = 2
 # new_acc = 120
 [11, 7, 2, 4].inject(100) { |acc, el| acc + el }
+
 # FOURTH ITERATION
 # acc = 120
 # el = 4
 # new_acc = 124
 p [11, 7, 2, 4].inject(100) { |acc, el| acc + el } # => 124
+
 # Nice! Being able to set our own initial accumulator can really open up our possibilities. Here's an inject that sums up all even numbers of an array:
 
 [11, 7, 2, 4].inject(0) do |acc, el|
