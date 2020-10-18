@@ -65,7 +65,7 @@ str2 = 'missisipi river'
 counter2 = Hash.new(0)
 str2.each_char { |char| counter2[char] += 1 }
 sorted = counter2.sort_by { |_key, value| value }
-print sorted[-1]
+print sorted
 
 
 # Get Double Age

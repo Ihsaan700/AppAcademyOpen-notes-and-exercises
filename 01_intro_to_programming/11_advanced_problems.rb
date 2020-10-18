@@ -505,7 +505,6 @@ def char_count(str)
   count
 end
 
-
 puts anagrams?('cat', 'act')          #=> true
 puts anagrams?('restful', 'fluster')  #=> true
 puts anagrams?('cat', 'dog')          #=> false
@@ -521,12 +520,13 @@ def consonant_cancel(sentence)
 end
 
 def remove_consonant(word)
-  vowels = 'aeious'
+  vowels = 'aeiou'
 
   word.each_char.with_index do |char, idx|
     return word[idx..-1] if vowels.include?(char)
   end
 end
+
 puts consonant_cancel('down the rabbit hole') #=> 'own e abbit ole'
 puts consonant_cancel('writing code is challenging') #=> 'iting ode is allenging'
 
