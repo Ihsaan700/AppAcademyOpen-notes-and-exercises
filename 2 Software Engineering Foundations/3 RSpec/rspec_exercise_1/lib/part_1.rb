@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def average(n1, n2)
   (n1 + n2) / 2.0
 end
@@ -22,7 +20,7 @@ def alternating_case(str)
   words = str.split(' ')
 
   new_words = words.map.with_index do |word, idx|
-    if idx.even?
+    if (idx % 2).zero?
       word.upcase
     else
       word.downcase

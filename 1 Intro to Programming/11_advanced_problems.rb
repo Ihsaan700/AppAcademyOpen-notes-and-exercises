@@ -376,6 +376,7 @@ def vowel_cipher(string)
   #   end
   # end
 
+
   changes = {
     'a' => 'e',
     'e' => 'i',
