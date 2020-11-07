@@ -3,6 +3,7 @@ GEM
   specs:
     byebug (11.1.3)
     diff-lcs (1.4.4)
+    rake (13.0.1)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -16,6 +17,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
+    ruby-debug-ide (0.7.2)
+      rake (>= 0.8.1)
 
 PLATFORMS
   ruby
@@ -23,6 +26,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   rspec (~> 3.2.0)
+  ruby-debug-ide
 
 BUNDLED WITH
    2.1.4
