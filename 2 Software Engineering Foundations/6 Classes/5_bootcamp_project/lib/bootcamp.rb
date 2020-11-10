@@ -67,12 +67,3 @@ class Bootcamp
   end
 end
 
-bootcamp = Bootcamp.new("Map Academy", "Anyone can be a cartographer.", 6)
-
-# bootcamp.enroll("Alice")
-# bootcamp.add_grade("Alice", 100)
-# bootcamp.add_grade("Alice", 75)
-# p bootcamp.average_grade("Alice")
-bootcamp.enroll("Bob")
-p bootcamp.average_grade("Alice")
-p bootcamp.average_grade("Bob")
